@@ -1,47 +1,61 @@
+const artists = [
+  {
+    name: "Ramesh Bhagat",
+    craft: "Baul Singer",
+    location: "West Bengal",
+    status: "Pending",
+  },
+  {
+    name: "Mohammad Yusuf",
+    craft: "Blue Pottery",
+    location: "Rajasthan",
+    status: "Pending",
+  },
+];
+
 const ArtistsTable = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+    <div className="mt-6 bg-white rounded-2xl shadow-sm overflow-hidden">
       <table className="w-full text-left">
-        <thead className="bg-[#FAF6F1] text-sm text-gray-600">
+        <thead className="bg-[#FAF6F1] text-gray-700 text-sm">
           <tr>
-            <th className="p-4">Artist</th>
-            <th className="p-4">Craft</th>
-            <th className="p-4">Location</th>
-            <th className="p-4">Status</th>
-            <th className="p-4 text-right">Action</th>
+            <th className="px-6 py-4">Artist</th>
+            <th className="px-6 py-4">Craft</th>
+            <th className="px-6 py-4">Location</th>
+            <th className="px-6 py-4">Status</th>
+            <th className="px-6 py-4 text-right">Action</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr className="border-t">
-            <td className="p-4 font-medium">Ramesh Bhagat</td>
-            <td className="p-4">Baul Singer</td>
-            <td className="p-4">West Bengal</td>
-            <td className="p-4 text-orange-600">Pending</td>
-            <td className="p-4 text-right space-x-2">
-              <button className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">
-                Approve
-              </button>
-              <button className="px-3 py-1 bg-red-500 text-white rounded-full text-sm">
-                Reject
-              </button>
-            </td>
-          </tr>
+          {artists.map((artist, index) => (
+            <tr
+           key={index}
+           className="border-t hover:bg-orange-50 hover:shadow-sm transition"
+          >
 
-          <tr className="border-t">
-            <td className="p-4 font-medium">Mohammad Yusuf</td>
-            <td className="p-4">Blue Pottery</td>
-            <td className="p-4">Rajasthan</td>
-            <td className="p-4 text-orange-600">Pending</td>
-            <td className="p-4 text-right space-x-2">
-              <button className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">
-                Approve
-              </button>
-              <button className="px-3 py-1 bg-red-500 text-white rounded-full text-sm">
-                Reject
-              </button>
-            </td>
-          </tr>
+              <td className="px-6 py-4 font-medium text-[#5A2E1B]">
+                {artist.name}
+              </td>
+              <td className="px-6 py-4">{artist.craft}</td>
+              <td className="px-6 py-4">{artist.location}</td>
+
+              <td className="px-6 py-4">
+                <span className="px-3 py-1 rounded-full text-sm bg-yellow-100 text-yellow-700">
+                  {artist.status}
+                </span>
+              </td>
+
+              <td className="px-6 py-4 text-right space-x-2">
+                <button className="px-4 py-1 rounded-full bg-green-600 text-white text-sm hover:bg-green-700">
+                  Approve
+                </button>
+                <button className="px-4 py-1 rounded-full bg-red-500 text-white text-sm hover:bg-red-600">
+                  Reject
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
