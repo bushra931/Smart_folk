@@ -1,3 +1,5 @@
+import AdminDashboard from "./pages/AdminDashboard";
+import FolkDashboard from "./pages/FolkDashboard";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,6 +21,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/folk-dashboard" element={<FolkDashboard />} />
           <Route path="/" element={<Index />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/artist/:id" element={<ArtistProfile />} />
