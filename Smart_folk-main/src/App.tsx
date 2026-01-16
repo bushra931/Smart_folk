@@ -2,6 +2,7 @@ import AdminBookings from "./pages/AdminBookings";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminDashboardHome from "./pages/AdminDashboardHome";
 import AdminArtists from "./pages/AdminArtists";
+import AdminUsers from "./pages/AdminUsers"; // ✅ ADD THIS
 import FolkDashboard from "./pages/FolkDashboard";
 
 import { Toaster } from "@/components/ui/toaster";
@@ -30,9 +31,10 @@ const App = () => (
 
           {/* ADMIN ROUTES */}
           <Route path="/admin" element={<AdminDashboard />}>
-          <Route index element={<AdminDashboardHome />} />
-          <Route path="artists" element={<AdminArtists />} />
-          <Route path="bookings" element={<AdminBookings />} />
+            <Route index element={<AdminDashboardHome />} />
+            <Route path="artists" element={<AdminArtists />} />
+            <Route path="bookings" element={<AdminBookings />} />
+            <Route path="users" element={<AdminUsers />} /> {/* ✅ USERS */}
           </Route>
 
           {/* USER ROUTES */}
@@ -53,4 +55,3 @@ const App = () => (
 );
 
 export default App;
-
