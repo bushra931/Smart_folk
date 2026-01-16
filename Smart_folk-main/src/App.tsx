@@ -1,3 +1,4 @@
+import AdminBookings from "./pages/AdminBookings";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminDashboardHome from "./pages/AdminDashboardHome";
 import AdminArtists from "./pages/AdminArtists";
@@ -29,8 +30,9 @@ const App = () => (
 
           {/* ADMIN ROUTES */}
           <Route path="/admin" element={<AdminDashboard />}>
-            <Route index element={<AdminDashboardHome />} />
-            <Route path="artists" element={<AdminArtists />} />
+          <Route index element={<AdminDashboardHome />} />
+          <Route path="artists" element={<AdminArtists />} />
+          <Route path="bookings" element={<AdminBookings />} />
           </Route>
 
           {/* USER ROUTES */}
