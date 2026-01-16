@@ -1,10 +1,15 @@
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminDashboardHome from "./pages/AdminDashboardHome";
+import AdminArtists from "./pages/AdminArtists";
 import FolkDashboard from "./pages/FolkDashboard";
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import Explore from "./pages/Explore";
 import ArtistProfile from "./pages/ArtistProfile";
@@ -21,15 +26,24 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/folk-dashboard" element={<FolkDashboard />} />
+
+          {/* ADMIN ROUTES */}
+          <Route path="/admin" element={<AdminDashboard />}>
+            <Route index element={<AdminDashboardHome />} />
+            <Route path="artists" element={<AdminArtists />} />
+          </Route>
+
+          {/* USER ROUTES */}
           <Route path="/" element={<Index />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/artist/:id" element={<ArtistProfile />} />
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/profile" element={<Profile />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/folk-dashboard" element={<FolkDashboard />} />
+
+          {/* 404 */}
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
@@ -37,3 +51,4 @@ const App = () => (
 );
 
 export default App;
+
