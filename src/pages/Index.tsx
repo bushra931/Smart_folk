@@ -67,6 +67,28 @@ const Index = () => {
           >
             Connect with authentic folk artists, artisans, and performers for your special moments
           </motion.p>
+          {/* Login / Signup Buttons */}
+          <motion.div
+            variants={itemVariants}
+            className="flex gap-4 mb-8"
+          >
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={() => navigate('/login')}
+            >
+              Login
+            </Button>
+
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+              onClick={() => navigate('/signup')}
+            >
+              Sign Up
+            </Button>
+          </motion.div>
 
           {/* Search Bar */}
           <motion.div
