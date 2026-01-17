@@ -1,5 +1,6 @@
 import React from "react";
 import AdminSidebar from "../AdminSidebar";
+// smart hacakhtn project
 
 const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

@@ -1,5 +1,5 @@
 import ArtistsTable from "../components/admin/ArtistsTable";
-
+  // smart hacakhtn project
 const AdminArtists = () => {
   return (
     <>

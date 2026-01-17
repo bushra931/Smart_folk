@@ -1,3 +1,4 @@
+// smart hacakhtn project
 const bookings = [
   {
     event: "Wedding Performance",

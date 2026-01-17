@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { BottomNavigation } from './BottomNavigation';
+// smart hacakhtn project
 
 interface AppLayoutProps {
   children: ReactNode;

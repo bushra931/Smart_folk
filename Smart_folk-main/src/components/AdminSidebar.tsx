@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+// smart hacakhtn project
 
 const linkBase =
   "block px-4 py-2 rounded-lg font-medium transition";
