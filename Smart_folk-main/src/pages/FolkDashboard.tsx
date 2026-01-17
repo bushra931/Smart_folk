@@ -1,10 +1,12 @@
 import React from "react";
+import FolkLayout from "../components/layout/FolkLayout";
 
 const FolkDashboard: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#FAF6F1]">
+    <FolkLayout>
+
       {/* PAGE CONTAINER */}
-      <div className="max-w-7xl mx-auto px-6 py-8 space-y-10">
+      <div className="space-y-10">
 
         {/* PROFILE HEADER */}
         <div className="bg-white rounded-2xl p-6 flex items-center gap-6 shadow-sm">
@@ -96,7 +98,7 @@ const FolkDashboard: React.FC = () => {
         </section>
 
       </div>
-    </div>
+    </FolkLayout>
   );
 };
 
@@ -156,4 +158,3 @@ const ReviewCard = ({
 );
 
 export default FolkDashboard;
-
