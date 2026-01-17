@@ -10,8 +10,8 @@
 @layer base {
   :root {
     /* Core Heritage Colors */
-    --background: 30 50% 97%; /* Parchment cream */
-    --foreground: 20 30% 15%; /* Deep brown-black */
+   --background: 40 30% 96%;/* Parchment cream */
+    --foreground: 15 30% 15%;
 
     --card: 35 40% 95%; /* Aged paper */
     --card-foreground: 20 30% 15%;
@@ -129,10 +129,9 @@
     scroll-behavior: smooth;
   }
 
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Poppins', system-ui, sans-serif;
-    min-height: 100dvh;
+ body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Source Sans 3', sans-serif;
   }
 
   /* Heritage Typography */
@@ -202,6 +201,7 @@
     filter: drop-shadow(0 0 6px hsl(var(--saffron) / 0.6));
   }
 
+  
   /* Folk pattern decorative border */
   .folk-border {
     @apply relative;
